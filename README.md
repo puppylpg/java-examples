@@ -1,6 +1,10 @@
 # java-examples
 Examples to use some functions or libs in java.
 
+Must use OpenJDK8 for some internal class usage:
+- download: https://github.com/ojdkbuild/ojdkbuild
+
+
 ## metrics(2017-11-14)
 [Metrics](http://metrics.dropwizard.io) to measure the behavior of critical components in java.
 - (2017-12-01)old: yammer metrics.
