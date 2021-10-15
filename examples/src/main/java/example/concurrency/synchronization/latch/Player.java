@@ -25,16 +25,16 @@ public class Player implements Runnable {
     }
 
     private void warmUp() {
-        System.out.println("Player " + num + " finished warming up.");
+        System.out.println("Player " + num + " is warming up.");
     }
 
     /**
      * 自己准备好，并等待所有人都准备好
      */
     private void readyAndWait() {
-        System.out.printf("Player %d is ready.%n", num);
         // 我准备好了
         playerReadySignal.countDown();
+        System.out.printf("Player %d is ready.%n", num);
         try {
             // 等裁判信号
             startSignal.await();
