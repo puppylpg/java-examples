@@ -4,17 +4,15 @@ import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import lombok.SneakyThrows;
 import org.apache.commons.lang3.RandomUtils;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.*;
 
 /**
  * 提交一大堆并行任务，然后使用{@link CompletionService}及时获取{@link Future}结果。
  * 避免了轮询。
  *
- * @author liuhaibo on 2018/06/13
+ * @author liuhaibo on 2021/10/15
  */
-public class FackThreadPoolDemo {
+public class FakeThreadPoolDemo {
 
     private static final int TASK_NUM = 20;
 
@@ -32,7 +30,7 @@ public class FackThreadPoolDemo {
     }
 
     public static void main(String... args) throws InterruptedException {
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(
+        ExecutorService executor = new ThreadPoolExecutor(
                 2,
                 4,
                 20L,
