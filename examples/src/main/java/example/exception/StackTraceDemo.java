@@ -1,9 +1,27 @@
 package example.exception;
 
+import java.util.Locale;
+
 /**
  * @author liuhaibo on 2019/12/25
  */
 public class StackTraceDemo {
+
+    public static void modifyStackTrace() {
+        String s = null;
+        try {
+            s.toLowerCase(Locale.ROOT);
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.setStackTrace(new StackTraceElement[]{new StackTraceElement("a","a","a", 1)});
+            e.printStackTrace();
+            e.setStackTrace(new StackTraceElement[]{new StackTraceElement("b","b","b", 1)});
+            e.printStackTrace();
+            e.setStackTrace(new StackTraceElement[]{});
+            e.printStackTrace();
+            System.out.println("...");
+        }
+    }
 
     public static void main(String... args) {
         inner("pikachu");
