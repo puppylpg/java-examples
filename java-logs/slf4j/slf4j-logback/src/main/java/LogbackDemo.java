@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
  */
 public class LogbackDemo {
 
-    private static final Logger log = LoggerFactory.getLogger(LogbackDemo.class);
+    private static final Logger log = LoggerFactory.getLogger("send.succeed");
 
     public static void main(String[] args) {
         log.debug("Debug log message");
