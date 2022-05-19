@@ -16,11 +16,12 @@ public class Referee {
     }
 
     public void announceStart() throws InterruptedException {
+        System.out.println("Referee: waiting players to be ready.");
         // 等所有运动员ready
         playerReadySignal.await();
+        System.out.println("Everyone is ready ~ Game start!!!");
         // 裁判放行
         startSignal.countDown();
-        System.out.println("Everyone is ready ~ Game start!!!");
     }
 
     public void waitAllPlayerFinish() throws InterruptedException {
