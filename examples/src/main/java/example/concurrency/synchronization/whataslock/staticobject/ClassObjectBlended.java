@@ -11,6 +11,7 @@ import java.util.concurrent.CountDownLatch;
  */
 public class ClassObjectBlended extends LockBase {
 
+    @Deprecated
     public void lockClassObject() {
         synchronized (this.getClass()) {
             work();
