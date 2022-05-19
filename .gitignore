@@ -6,6 +6,7 @@ tmp/
 # Log file
 *.log
 logs/
+**/logs/
 
 # BlueJ files
 *.ctxt
@@ -34,5 +35,5 @@ writesomebytes.txt
 forwrite.txt
 
 # generated protobuf
-src/main/proto-generated
+examples/src/main/proto-generated
 

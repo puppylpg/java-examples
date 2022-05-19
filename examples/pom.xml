@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>cn.com.puppylpg</groupId>
+        <artifactId>java-examples</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>examples</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <dropwizard.metrics.version>3.2.5</dropwizard.metrics.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <proto.generated.dir>src/main/proto-generated</proto.generated.dir>
+        <proto.src.dir>src/main/protobuf</proto.src.dir>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <!--jar-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>example.java8.stream.ListToMap</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <!--assemble a jar with dependency or even with MANIFEST-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                <artifactId>maven-assembly-plugin</artifactId>-->
+            <!--                <version>3.1.0</version>-->
+            <!--                &lt;!&ndash;configuration can be in outer or inner&ndash;&gt;-->
+            <!--                &lt;!&ndash;<configuration>&ndash;&gt;-->
+            <!--                &lt;!&ndash;<descriptorRefs>&ndash;&gt;-->
+            <!--                &lt;!&ndash;<descriptorRef>jar-with-dependencies</descriptorRef>&ndash;&gt;-->
+            <!--                &lt;!&ndash;</descriptorRefs>&ndash;&gt;-->
+            <!--                &lt;!&ndash;<archive>&ndash;&gt;-->
+            <!--                &lt;!&ndash;<manifest>&ndash;&gt;-->
+            <!--                &lt;!&ndash;<mainClass>example.configs.LoadConfigDemo</mainClass>&ndash;&gt;-->
+            <!--                &lt;!&ndash;</manifest>&ndash;&gt;-->
+            <!--                &lt;!&ndash;</archive>&ndash;&gt;-->
+            <!--                &lt;!&ndash;<appendAssemblyId>false</appendAssemblyId>&ndash;&gt;-->
+            <!--                &lt;!&ndash;</configuration>&ndash;&gt;-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>assemble-a-jar-with-dependency</id>-->
+            <!--                        <phase>package</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>single</goal>-->
+            <!--                        </goals>-->
+            <!--                        <configuration>-->
+            <!--                            <descriptorRefs>-->
+            <!--                                <descriptorRef>jar-with-dependencies</descriptorRef>-->
+            <!--                            </descriptorRefs>-->
+            <!--                        </configuration>-->
+            <!--                    </execution>-->
+            <!--                    <execution>-->
+            <!--                        <id>assemble-a-jar-with-dependency-manifest</id>-->
+            <!--                        <phase>package</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>single</goal>-->
+            <!--                        </goals>-->
+            <!--                        <configuration>-->
+            <!--                            &lt;!&ndash;assign a name by yourself&ndash;&gt;-->
+            <!--                            <finalName>manifest</finalName>-->
+            <!--                            <descriptorRefs>-->
+            <!--                                <descriptorRef>jar-with-dependencies</descriptorRef>-->
+            <!--                            </descriptorRefs>-->
+            <!--                            <archive>-->
+            <!--                                <manifest>-->
+            <!--                                    <mainClass>example.configs.LoadConfigDemo</mainClass>-->
+            <!--                                </manifest>-->
+            <!--                            </archive>-->
+            <!--                            <appendAssemblyId>false</appendAssemblyId>-->
+            <!--                        </configuration>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <relocations>
+                                <relocation>
+                                    <pattern>org.apache.kafka.clients</pattern>
+                                    <shadedPattern>org.apache.my.kafka.clients</shadedPattern>
+                                    <excludes>
+                                        <exclude>org.apache.kafka.clients.consumer.*</exclude>
+                                    </excludes>
+                                </relocation>
+                            </relocations>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <configuration>
+                    <executable>java</executable>
+                    <arguments>
+                        <argument>-Dliuhaibo.love=liuguilin-forever</argument>
+                        <argument>-cp</argument>
+                        <classpath/>
+                        <argument>example.properties.CliProperty</argument>
+                        <argument>arg1</argument>
+                        <argument>arg2</argument>
+                        <argument>arg3</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+            <!-- source -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- protobuf -->
+            <plugin>
+                <groupId>com.github.os72</groupId>
+                <artifactId>protoc-jar-maven-plugin</artifactId>
+                <version>3.11.4</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <protocVersion>3.11.4</protocVersion>
+                            <addSources>none</addSources>
+                            <inputDirectories>
+                                <include>${proto.src.dir}</include>
+                            </inputDirectories>
+                            <outputDirectory>${proto.generated.dir}</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- add source directory -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>${proto.generated.dir}</source>
+                                <source>src/main/java-proto</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- add clean directory -->
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>${proto.generated.dir}</directory>
+                            <includes>
+                                <include>**/*</include>
+                            </includes>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <dependencies>
+        <!-- Metrics -->
+        <!-- outdated: use dropwizard -->
+        <dependency>
+            <groupId>com.yammer.metrics</groupId>
+            <artifactId>metrics-core</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.dropwizard.metrics/metrics-core -->
+        <dependency>
+            <groupId>io.dropwizard.metrics</groupId>
+            <artifactId>metrics-core</artifactId>
+            <version>${dropwizard.metrics.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard.metrics</groupId>
+            <artifactId>metrics-ehcache</artifactId>
+            <version>${dropwizard.metrics.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.ehcache/jcache -->
+        <!--<dependency>-->
+        <!--<groupId>org.ehcache</groupId>-->
+        <!--<artifactId>jcache</artifactId>-->
+        <!--<version>1.0.1</version>-->
+        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/javax.cache/cache-api -->
+        <dependency>
+            <groupId>javax.cache</groupId>
+            <artifactId>cache-api</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.10.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.7</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.11</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>3.9.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-configuration2 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-configuration2</artifactId>
+            <version>2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/in.zapr.druid/druidry -->
+        <dependency>
+            <groupId>in.zapr.druid</groupId>
+            <artifactId>druidry</artifactId>
+            <version>2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpasyncclient</artifactId>
+            <version>4.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.42.Final</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>27.0-jre</version>
+        </dependency>
+        <dependency>
+            <groupId>com.linecorp.centraldogma</groupId>
+            <artifactId>centraldogma-client-armeria-legacy</artifactId>
+            <version>0.33.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>4.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jgit</groupId>
+            <artifactId>org.eclipse.jgit</artifactId>
+            <version>5.5.1.201910021850-r</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.11.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients -->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-core</artifactId>
+            <version>1.21</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-generator-annprocess</artifactId>
+            <version>1.21</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>

@@ -4,14 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.com.puppylpg</groupId>
-    <artifactId>java-examples</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <parent>
+        <groupId>cn.com.puppylpg</groupId>
+        <artifactId>java-logs</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <modules>
-        <module>examples</module>
-        <module>java-logs</module>
-    </modules>
+    <artifactId>jul</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
 </project>
