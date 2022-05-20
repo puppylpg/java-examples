@@ -1,4 +1,4 @@
-package example.concurrency.synchronization.latch;
+package example.concurrency.synchronization.latch.race;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

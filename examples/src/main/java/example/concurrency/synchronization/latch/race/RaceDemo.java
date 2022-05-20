@@ -1,9 +1,9 @@
-package example.concurrency.synchronization.latch;
+package example.concurrency.synchronization.latch.race;
 
 import java.util.concurrent.CountDownLatch;
 
 /**
- * Latch: 等待启动一组相关操作，或者等待关闭一组相关操作
+ * Latch: 等待启动一组相关操作，或者等待关闭一组相关操作（一波人卡另一波人，“互相掣肘”）
  *
  * Referee等所有运动员就绪；
  * Player等裁判开闸；
@@ -16,11 +16,11 @@ import java.util.concurrent.CountDownLatch;
 public class RaceDemo {
 
     private final static int PLAYER_NUM = 5;
-    private static CountDownLatch playerReady = new CountDownLatch(PLAYER_NUM);
-    private static CountDownLatch startGate = new CountDownLatch(1);
-    private static CountDownLatch closeGate = new CountDownLatch(PLAYER_NUM);
+    private static final CountDownLatch PLAYER_READY = new CountDownLatch(PLAYER_NUM);
+    private static final CountDownLatch START_GATE = new CountDownLatch(1);
+    private static final CountDownLatch CLOSE_GATE = new CountDownLatch(PLAYER_NUM);
 
-    private static Board board = new Board();
+    private static final Board BOARD = new Board();
 
     /**
      * Player 4 finished warming up.
@@ -44,10 +44,10 @@ public class RaceDemo {
     public static void main(String... args) throws InterruptedException {
 
         for(int i = 0; i < PLAYER_NUM; i++) {
-            new Thread(new Player(startGate, closeGate, playerReady, i, board)).start();
+            new Thread(new Player(START_GATE, CLOSE_GATE, PLAYER_READY, i, BOARD)).start();
         }
 
-        Referee referee = new Referee(startGate, closeGate, playerReady, board);
+        Referee referee = new Referee(START_GATE, CLOSE_GATE, PLAYER_READY, BOARD);
 
         referee.announceStart();
         referee.waitAllPlayerFinish();

@@ -1,12 +1,12 @@
-package example.concurrency.synchronization.latch;
+package example.concurrency.synchronization.latch.race;
 
 import java.util.concurrent.CountDownLatch;
 
 public class Referee {
 
-    private CountDownLatch startSignal, finishSignal, playerReadySignal;
+    private final CountDownLatch startSignal, finishSignal, playerReadySignal;
 
-    private Board board;
+    private final Board board;
 
     Referee(CountDownLatch startSignal, CountDownLatch finishSignal, CountDownLatch playerReadySignal, Board board) {
         this.startSignal = startSignal;

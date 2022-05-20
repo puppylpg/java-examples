@@ -1,12 +1,12 @@
-package example.concurrency.synchronization.latch;
+package example.concurrency.synchronization.latch.race;
 
 import java.util.concurrent.CountDownLatch;
 
 public class Player implements Runnable {
-    private CountDownLatch startSignal, finishSignal, playerReadySignal;
-    private int num;
+    private final CountDownLatch startSignal, finishSignal, playerReadySignal;
+    private final int num;
 
-    private Board board;
+    private final Board board;
 
     Player(CountDownLatch startSignal, CountDownLatch finishSignal, CountDownLatch playerReadySignal, int num, Board board) {
         this.startSignal = startSignal;
