@@ -3,6 +3,7 @@ package example.metrics.old;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.LockSupport;
 
 import com.yammer.metrics.Metrics;
 import com.yammer.metrics.core.Counter;
@@ -38,7 +39,8 @@ public class TestCounter {
                 tc.take();
             }
             flag = !flag;
-            Thread.sleep(1000);
+//            Thread.sleep(1000);
+            LockSupport.parkNanos(1000 * 1000);
         }
     }
 

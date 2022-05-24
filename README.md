@@ -229,7 +229,7 @@ can be parsed into Path or File later.
 
 ## jgit
 Use jgit to implement git behaviors.
-- Add some porcelain high-level api demo;
+- Add some porcelain high-level api semaphoreProducerConsumerDemo;
 
 ## gc
 GC parameters & logs to use.
