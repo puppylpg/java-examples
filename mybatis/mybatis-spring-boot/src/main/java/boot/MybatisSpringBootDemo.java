@@ -1,7 +1,8 @@
 package boot;
 
 import boot.entity.Blog;
-import boot.mapper.BlogMapper;
+import org.mybatis.spring.annotation.MapperScan;
+import outer.BlogMapper;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,6 +19,7 @@ import java.util.List;
  * @author puppylpg on 2022/05/31
  */
 @SpringBootApplication
+@MapperScan("outer")
 public class MybatisSpringBootDemo implements CommandLineRunner {
 
     private final BlogMapper mapper;

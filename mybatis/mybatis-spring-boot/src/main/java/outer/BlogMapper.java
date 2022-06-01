@@ -1,4 +1,4 @@
-package boot.mapper;
+package outer;
 
 import boot.entity.Blog;
 import org.apache.ibatis.annotations.Insert;
@@ -9,14 +9,11 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
 /**
- * springboot里，{@link Mapper}终于有用了……
- * https://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
- *
- * 如果用了{@link org.mybatis.spring.annotation.MapperScan}，{@link  Mapper}又没用了。
+ * 用了{@link org.mybatis.spring.annotation.MapperScan}，{@link  Mapper}又没用了。
  *
  * @author puppylpg on 2022/05/31
  */
-@Mapper
+//@Mapper
 public interface BlogMapper {
 
     @Select("select * from BLOG")

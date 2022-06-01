@@ -38,6 +38,12 @@ https://mybatis.org/mybatis-3/zh/getting-started.html
 
 所以mybatis plus出现了！
 
+# 关联
+mybatis只管帮你映射，不帮你查。查关联关系，可以写xml sql，也可以写annotation sql，但join sql得自己写。mybatis帮你把结果映射为Java对象。
+可以定义association复杂（包含关联关系）的对象，但查还是自己查。
+
+TODO：mybatis plus呢？好像也没有
+> 但是，如果涉及对于多表之间的关联查询，lambda 表达式就显得力不从心了，因为 Mybatis-Plus 并没有提供类似于 join 查询的条件构造器。
 
 # mybatis others
 帮助生成sql：
