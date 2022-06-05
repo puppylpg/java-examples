@@ -26,3 +26,6 @@ mybatis-spring的mybatis和spring都是provided，所以需要自己手动引入
 > I have recoded this to be more aligned with Spring @configuration that is based on annotations. So I have added a @Mapper marker annotation to the core so other DI frameworks can use it (spring, boot, cdi)
 
 TODO：关于@MapperScan的处理逻辑，参考{@link MapperScannerRegistrar#registerBeanDefinitions}
+
+# mapper类和xml混搭
+也可以在mapper类里写接口方法，在xml里写sql映射。使用FactoryBean#setMapperLocations指定xml文件位置即可。

@@ -40,6 +40,10 @@ public class MybatisSpringDemo {
         List<Blog> blogs = mapper.getAll();
         blogs.forEach(System.out::println);
 
+        System.out.println("find by xml---");
+        List<Blog> blogsByXml = mapper.getAllByXml();
+        blogsByXml.forEach(System.out::println);
+
         applicationContext.close();
     }
 }

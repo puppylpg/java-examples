@@ -8,6 +8,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.type.AnnotationMetadata;
 
 import javax.sql.DataSource;
@@ -19,13 +20,23 @@ import javax.sql.DataSource;
  * @author puppylpg on 2022/05/31
  */
 @Configuration
-@MapperScan(basePackages = "mapper")
+@MapperScan(basePackages = MybatisConfig.MAPPER_PACKAGE)
 public class MybatisConfig {
+
+    public static final String MAPPER_PACKAGE = "mapper";
+
+    /**
+     * Java不编译xml，所以target里没有这些文件。需要maven里设置resources，include xml文件才行。
+     * 而且必须使用maven compile才行。所以这是一个纯maven的trick，和java无关
+     */
+    public static final String MAPPER_XML_PATH = "classpath:mapper/xml/*.xml";
 
     @Bean
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dataSource());
+        // 和@MapperScan一起，一个处理@Mapper，一个处理xml mapper
+        factoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MAPPER_XML_PATH));
         return factoryBean.getObject();
     }
 

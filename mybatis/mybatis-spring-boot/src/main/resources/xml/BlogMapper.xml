@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="outer.BlogMapper">
+    <resultMap id="BlogResultMap" type="boot.entity.Blog">
+        <result column="id" property="id"/>
+        <result column="title" property="title"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, title
+    </sql>
+
+    <select id="getAllByXml" resultMap="BlogResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM
+        BLOG
+    </select>
+
+</mapper>

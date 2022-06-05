@@ -24,4 +24,9 @@ public interface BlogMapper {
 
     @Select("SELECT * FROM BLOG WHERE id = #{blogId}")
     Blog getUser(@Param("blogId") String blogId);
+
+    /**
+     * 使用xml定义mapper映射
+     */
+    List<Blog> getAllByXml();
 }
