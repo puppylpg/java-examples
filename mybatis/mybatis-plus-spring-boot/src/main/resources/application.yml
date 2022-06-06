@@ -10,6 +10,6 @@ spring:
     # sql schema
     schema: classpath:scripts/schema.sql
     data: classpath:scripts/data.sql
-mybatis:
+mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true

@@ -17,7 +17,7 @@ import java.util.List;
  * @author puppylpg on 2022/05/31
  */
 @Mapper
-public interface BlogMapper {
+public interface AnotherBlogMapper {
 
     @Select("select * from BLOG")
     List<Blog> getAll();

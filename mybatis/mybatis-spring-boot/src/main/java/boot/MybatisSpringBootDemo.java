@@ -19,7 +19,7 @@ import java.util.List;
  * @author puppylpg on 2022/05/31
  */
 @SpringBootApplication
-@MapperScan("outer")
+@MapperScan(basePackages = {"outer", "boot"})
 public class MybatisSpringBootDemo implements CommandLineRunner {
 
     private final BlogMapper mapper;
@@ -35,6 +35,9 @@ public class MybatisSpringBootDemo implements CommandLineRunner {
     /**
      * insert es: 1
      * insert mybatis: 1
+     * id: 1, title: elasticsearch
+     * id: 2, title: mybatis
+     * find by xml---
      * id: 1, title: elasticsearch
      * id: 2, title: mybatis
      */
