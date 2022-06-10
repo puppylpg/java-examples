@@ -2,14 +2,21 @@
 spring:
   datasource:
     url: jdbc:h2:mem:pokemon;DB_CLOSE_DELAY=-1;MODE=MySQL
+#    url: jdbc:mysql://localhost:3306/liuhaibo?useUnicode=true&characterEncoding=utf8&serverTimezone=Hongkong&verifyServerCertificate=false&useSSL=false
+    # 批量写！！！
+#    url: jdbc:mysql://localhost:3306/liuhaibo?useUnicode=true&characterEncoding=utf8&serverTimezone=Hongkong&verifyServerCertificate=false&useSSL=false&rewriteBatchedStatements=true
     # embedded local file
-    #spring.datasource.url=jdbc:h2:./pokemon
     driverClassName: org.h2.Driver
-    #spring.datasource.username=sa
-    #spring.datasource.password=password
+    #spring.datasource.url=jdbc:h2:./pokemon
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: root
+#    password: password
     # sql schema
     schema: classpath:scripts/schema.sql
     data: classpath:scripts/data.sql
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
+#logging:
+#  level:
+#    root: debug
