@@ -1,4 +1,4 @@
-package example.proxy.monitor;
+package example.proxy.jdk.monitor;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

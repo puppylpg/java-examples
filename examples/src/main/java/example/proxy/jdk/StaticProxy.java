@@ -1,4 +1,4 @@
-package example.proxy;
+package example.proxy.jdk;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;

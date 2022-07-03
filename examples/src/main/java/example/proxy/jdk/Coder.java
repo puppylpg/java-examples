@@ -1,4 +1,4 @@
-package example.proxy;
+package example.proxy.jdk;
 
 /**
  * 其实，结合RPC想想，这个类就是protocol，是server给client提供的接口！

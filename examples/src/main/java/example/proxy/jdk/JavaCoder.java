@@ -1,4 +1,4 @@
-package example.proxy;
+package example.proxy.jdk;
 
 import lombok.AllArgsConstructor;
 import org.apache.commons.lang3.RandomUtils;
@@ -11,6 +11,9 @@ public class JavaCoder implements Coder {
 
     String name;
 
+    public JavaCoder() {
+        this("《CGlib has one important restriction: the target class must provide a default constructor》");
+    }
     @Override
     public void implementDemands(String demand) {
         System.out.println(name + ": I use Java to finish " + demand);

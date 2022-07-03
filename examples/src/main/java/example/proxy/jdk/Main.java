@@ -1,4 +1,4 @@
-package example.proxy;
+package example.proxy.jdk;
 
 import java.lang.reflect.*;
 
@@ -22,6 +22,61 @@ import java.lang.reflect.*;
  */
 public class Main {
 
+    /**
+     * ===== static proxy =====
+     * Tom: I'll use 15 hours.
+     * OK, I'll find a coder to do that.
+     * Tom: I use Java to finish Send an ad
+     * No! ILLEGAL demand!
+     *
+     * ===== dynamic proxy =====
+     *
+     * => method =>
+     * comment :
+     * implementDemands :
+     * 	arg0 -> class java.lang.String
+     * estimateTime :
+     * 	arg0 -> class java.lang.String
+     * equals :
+     * 	arg0 -> class java.lang.Object
+     * toString :
+     * hashCode :
+     * getInvocationHandler :
+     * 	arg0 -> class java.lang.Object
+     * newProxyInstance :
+     * 	arg0 -> class java.lang.ClassLoader
+     * 	arg1 -> class [Ljava.lang.Class;
+     * 	arg2 -> interface java.lang.reflect.InvocationHandler
+     * getProxyClass :
+     * 	arg0 -> class java.lang.ClassLoader
+     * 	arg1 -> class [Ljava.lang.Class;
+     * isProxyClass :
+     * 	arg0 -> class java.lang.Class
+     * wait :
+     * 	arg0 -> long
+     * 	arg1 -> int
+     * wait :
+     * 	arg0 -> long
+     * wait :
+     * getClass :
+     * notify :
+     * notifyAll :
+     *
+     * => constructor =>
+     * com.sun.proxy.$Proxy0 :
+     * 	arg0 -> interface java.lang.reflect.InvocationHandler
+     *
+     * => invoke method =>
+     * >>> Before: 2022-07-03T22:30:53.686
+     * Tom: I'll use 16 hours.
+     * <<< After: 2022-07-03T22:30:53.686
+     * >>> Before: 2022-07-03T22:30:53.686
+     * Tom: I use Java to finish Send an ad
+     * <<< After: 2022-07-03T22:30:53.686
+     * >>> Before: 2022-07-03T22:30:53.686
+     * <<< After: 2022-07-03T22:30:53.686
+     * (Proxy) Java is perfect!
+     */
     public static void main(String ... args) {
         // true coder, 需要被代理
         Coder coder = new JavaCoder("Tom");

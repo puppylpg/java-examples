@@ -1,7 +1,7 @@
-package example.proxy.monitor;
+package example.proxy.jdk.monitor;
 
-import example.proxy.Coder;
-import example.proxy.JavaCoder;
+import example.proxy.jdk.Coder;
+import example.proxy.jdk.JavaCoder;
 
 import java.lang.reflect.Proxy;
 

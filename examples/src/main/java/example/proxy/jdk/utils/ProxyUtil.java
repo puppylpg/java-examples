@@ -1,6 +1,6 @@
-package example.proxy.utils;
+package example.proxy.jdk.utils;
 
-import example.proxy.JavaCoder;
+import example.proxy.jdk.JavaCoder;
 import sun.misc.ProxyGenerator;
 
 import java.io.File;
