@@ -35,7 +35,7 @@ public class MybatisConfig {
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dataSource());
-        // 和@MapperScan一起，一个处理@Mapper，一个处理xml mapper
+        // 和@MapperScan一起，一个处理mapper接口，一个处理xml mapper
         factoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MAPPER_XML_PATH));
         return factoryBean.getObject();
     }

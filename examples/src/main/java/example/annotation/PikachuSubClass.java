@@ -5,8 +5,8 @@ package example.annotation;
  *
  * 注解：给程序看的。按照约定好的行为添加注释，程序看到之后要用parser去parse其行为。
  */
-@Pikachu(speak = "pikapika on class")
-public class AnnotationDemo {
+//@Pikachu(speak = "pikapika on subclass")
+public class PikachuSubClass extends PikachuParent implements PikachuInterface {
 
     /**
      * This is for {@link Pikachu#value()}

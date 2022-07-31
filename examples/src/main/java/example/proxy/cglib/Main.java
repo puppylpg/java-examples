@@ -1,6 +1,5 @@
 package example.proxy.cglib;
 
-import example.proxy.jdk.Coder;
 import example.proxy.jdk.JavaCoder;
 import net.sf.cglib.proxy.Enhancer;
 
@@ -32,7 +31,7 @@ public class Main {
         // cglib 不需要传入被代理的类，只需要给出要代理的类的class文件，它自己会创建
         enhancer.setSuperclass(JavaCoder.class);
 //        enhancer.setSuperclass(Coder.class);
-        enhancer.setCallback(new CGlibBibiAroundInterceptor());
+        enhancer.setCallback(new CglibBibiAroundInterceptor());
         JavaCoder javaCoder = (JavaCoder) enhancer.create();
 //        Coder javaCoder = (JavaCoder) enhancer.create();
 

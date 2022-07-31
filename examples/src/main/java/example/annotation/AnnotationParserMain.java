@@ -15,10 +15,10 @@ import java.lang.reflect.Method;
  * 1. 读取源代码文本，逐字符解析？太原始太困难了，不可取；
  * 2. 从反射读取annotation？yes！
  */
-public class AnnotationParser {
+public class AnnotationParserMain {
 
     public static void main(String... args) {
-        Class<AnnotationDemo> clazz = AnnotationDemo.class;
+        Class<PikachuSubClass> clazz = PikachuSubClass.class;
         Pikachu annotationForClass = clazz.getAnnotation(Pikachu.class);
         //class:
         //value() annotation: pikachu

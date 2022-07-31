@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
  *
  * @author puppylpg on 2022/07/03
  */
-public class CGlibBibiAroundInterceptor implements MethodInterceptor {
+public class CglibBibiAroundInterceptor implements MethodInterceptor {
 
     @Override
     public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
