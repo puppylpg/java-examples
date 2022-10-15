@@ -19,6 +19,8 @@
 ```
 说明和springboot默认扫描的包一致。显式使用MapperScan可以改变这一策略。事实上，发现如果使用了MapperScan，@Mapper的自动注册就不生效了（log里没有上述debug语句了）。
 
+> mybatis本身提供了一个标记接口`@Mapper`，没有实际用处。**在mybatis-spring-boot-starter里，所有用@Mapper标记的接口都直接生成mapper bean。但是一旦配置了@MapperScan它就失效了**，又没用了。为什么？**因为springboot的auto config（`AutoConfiguredMapperScannerRegistrar`）和@MapperScan一样也是构造出一个MapperScannerConfigurer，设置它的`annotationClass=Mapper.class`**。所以如果用了@MapperScan，就已经有一个MapperScannerConfigurer，springboot也就不再自动配置了。
+
 所以如果想阻止自动注册mapper，只要有手动注册的MapperFactoryBean就行了。
 
 另外spring boot配置mybatis也更方便了。
