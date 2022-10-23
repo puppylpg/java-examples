@@ -37,3 +37,6 @@ forwrite.txt
 # generated protobuf
 examples/src/main/proto-generated
 
+# hhz
+hhz/excel
+hhz/posts
