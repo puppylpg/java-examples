@@ -41,6 +41,10 @@ public class HhzExcel {
     private String publishTime;
 
     @CustomMerge(needMerge = true)
+    @ExcelProperty("用户id")
+    private String userId;
+
+    @CustomMerge(needMerge = true)
     @ColumnWidth(20)
     @ExcelProperty("用户名")
     private String nickname;

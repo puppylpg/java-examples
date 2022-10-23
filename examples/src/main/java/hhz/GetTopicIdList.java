@@ -13,7 +13,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author puppylpg on 2020/06/30
+ * 根据hhz/topics抽取topic id，加上额外的热门topic id
+ *
+ * @author puppylpg on 2022/10/23
  */
 public class GetTopicIdList {
 

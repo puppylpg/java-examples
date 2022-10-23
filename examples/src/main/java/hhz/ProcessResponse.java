@@ -20,7 +20,9 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
- * @author puppylpg on 2020/07/06
+ * 根据hhz/topics下获取到的topic id，处理hhz/posts下的数据，生成excel
+ *
+ * @author puppylpg on 2022/10/23
  */
 public class ProcessResponse {
 
@@ -50,7 +52,8 @@ public class ProcessResponse {
             }
 
             if (CollectionUtils.isNotEmpty(postsInTopic)) {
-                List<HhzExcel> hhzExcels = postsInTopic.stream().flatMap(post -> post.convertToExcel().stream()).collect(Collectors.toList());
+                // 不要image了
+                List<HhzExcel> hhzExcels = postsInTopic.stream().flatMap(post -> post.convertToExcel(false).stream()).collect(Collectors.toList());
                 String topicTitle = hhzExcels.get(0).getTopicTitle();
                 topicTitle = StringUtils.replace(topicTitle, " ", "_");
 

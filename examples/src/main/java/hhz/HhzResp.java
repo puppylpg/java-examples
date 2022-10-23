@@ -229,7 +229,7 @@ public class HhzResp {
         }
 
         // 如果有多个图片，返回多个对象
-        public List<HhzExcel> convertToExcel() {
+        public List<HhzExcel> convertToExcel(boolean withImages) {
             Instant instant = Instant.ofEpochSecond(Long.parseLong(photo.photoInfo.addtime));
             ZonedDateTime zonedDateTime = ZonedDateTime.ofInstant(instant, ZoneId.systemDefault());
 
@@ -240,6 +240,7 @@ public class HhzResp {
                     .title(photo.photoInfo.title)
                     .content(photo.photoInfo.remark)
                     .publishTime(FORMATTER.format(zonedDateTime))
+                    .userId(photo.userInfo.uid)
                     .nickname(photo.userInfo.nick)
                     .comment(photo.counter.comment)
                     .like(photo.counter.like)
@@ -248,12 +249,13 @@ public class HhzResp {
                     .build();
 
             List<Photo.PhotoInfo.ImageList> images = photo.photoInfo.imageLists;
-            if (CollectionUtils.isNotEmpty(images)) {
+            // 不想要image
+            if (CollectionUtils.isEmpty(images) || !withImages) {
+                return Collections.singletonList(hhzExcel);
+            } else {
                 return images.stream().map(
                         image -> hhzExcel.toBuilder().url(image.ori_pic_url).build()
                 ).collect(Collectors.toList());
-            } else {
-                return Collections.singletonList(hhzExcel);
             }
         }
 
