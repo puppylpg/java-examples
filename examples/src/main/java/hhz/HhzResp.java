@@ -4,12 +4,15 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import hhz.excel.HhzExcel;
 import lombok.Data;
+import org.apache.commons.collections4.CollectionUtils;
 
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author puppylpg on 2022/10/23
@@ -225,13 +228,15 @@ public class HhzResp {
             }
         }
 
-        public HhzExcel convertToExcel() {
+        // 如果有多个图片，返回多个对象
+        public List<HhzExcel> convertToExcel() {
             Instant instant = Instant.ofEpochSecond(Long.parseLong(photo.photoInfo.addtime));
             ZonedDateTime zonedDateTime = ZonedDateTime.ofInstant(instant, ZoneId.systemDefault());
 
-            return HhzExcel.builder()
+            HhzExcel hhzExcel = HhzExcel.builder()
                     .topicId(photo.photoInfo.topic.id)
                     .topicTitle(photo.photoInfo.topic.title)
+                    .id(photo.photoInfo.id)
                     .title(photo.photoInfo.title)
                     .content(photo.photoInfo.remark)
                     .publishTime(FORMATTER.format(zonedDateTime))
@@ -241,6 +246,15 @@ public class HhzResp {
                     .favorite(photo.counter.favorite)
                     .share(photo.counter.share)
                     .build();
+
+            List<Photo.PhotoInfo.ImageList> images = photo.photoInfo.imageLists;
+            if (CollectionUtils.isNotEmpty(images)) {
+                return images.stream().map(
+                        image -> hhzExcel.toBuilder().url(image.ori_pic_url).build()
+                ).collect(Collectors.toList());
+            } else {
+                return Collections.singletonList(hhzExcel);
+            }
         }
 
     }

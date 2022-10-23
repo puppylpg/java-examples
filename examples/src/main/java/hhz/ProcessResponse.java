@@ -2,6 +2,7 @@ package hhz;
 
 import com.alibaba.excel.EasyExcel;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import hhz.excel.CustomMergeStrategy;
 import hhz.excel.HhzExcel;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.io.FileUtils;
@@ -49,13 +50,15 @@ public class ProcessResponse {
             }
 
             if (CollectionUtils.isNotEmpty(postsInTopic)) {
-                List<HhzExcel> hhzExcels = postsInTopic.stream().map(HhzResp.Post::convertToExcel).collect(Collectors.toList());
+                List<HhzExcel> hhzExcels = postsInTopic.stream().flatMap(post -> post.convertToExcel().stream()).collect(Collectors.toList());
                 String topicTitle = hhzExcels.get(0).getTopicTitle();
                 topicTitle = StringUtils.replace(topicTitle, " ", "_");
 
                 File result = new File(String.format("hhz/excel/%d-%s.xlsx", topic, topicTitle));
 
                 EasyExcel.write(result, HhzExcel.class)
+                        // 有自己的行合并策略
+                        .registerWriteHandler(new CustomMergeStrategy(HhzExcel.class))
                         .sheet("sheet1")
                         .doWrite(hhzExcels);
             }
