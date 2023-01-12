@@ -4,14 +4,14 @@
         # Console appender
         <Console name="stdout" target="SYSTEM_OUT">
             # Pattern of log message for console appender
-            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %p %m%n"/>
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50}:%L - %msg%n"/>
         </Console>
 
         # File appender
         <File name="fileout" fileName="target/log4j2/fileout.log"
               immediateFlush="false" append="true">
             # Pattern of log message for file appender
-            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %p %m%n"/>
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50}:%L - %msg%n"/>
         </File>
 
         # Rolling appender
@@ -19,7 +19,7 @@
                      fileName="target/log4j2/roll-by-size.log" filePattern="target/log4j2/roll-by-size.%i.log"
                      ignoreExceptions="false">
             <PatternLayout>
-                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %p %m%n</Pattern>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50}:%L - %msg%n</Pattern>
             </PatternLayout>
             <Policies>
                 <OnStartupTriggeringPolicy/>
@@ -32,7 +32,7 @@
                      filePattern="target/log4j2/roll-by-time.%d{yyyy-MM-dd-HH-mm}.log"
                      ignoreExceptions="false">
             <PatternLayout>
-                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %p %m%n</Pattern>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50}:%L - %msg%n</Pattern>
             </PatternLayout>
             <TimeBasedTriggeringPolicy/>
         </RollingFile>
@@ -42,7 +42,7 @@
                      filePattern="target/log4j2/roll-by-time-and-size.%d{yyyy-MM-dd-HH-mm}.%i.log"
                      ignoreExceptions="false">
             <PatternLayout>
-                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %p %m%n</Pattern>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50}:%L - %msg%n</Pattern>
             </PatternLayout>
             <Policies>
                 <OnStartupTriggeringPolicy/>

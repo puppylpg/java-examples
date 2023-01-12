@@ -4,7 +4,7 @@
     <!--Console appender -->
     <appender name="stdout" class="org.apache.log4j.ConsoleAppender">
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p %m%n"/>
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50}:%L - %msg%n"/>
         </layout>
     </appender>
 
