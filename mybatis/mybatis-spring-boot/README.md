@@ -1,4 +1,6 @@
 
+用了mybatis-spring-boot-autoconfig，使用mybatis只需要干一件事就行了：写一个mapper class并标记上@Mapper注解（也许还要再来个xml mapper）
+
 - https://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
 
 `@Mapper`在spring boot里可以自动注册mapper：

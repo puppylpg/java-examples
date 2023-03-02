@@ -1,4 +1,4 @@
-package outer;
+package boot.outer;
 
 import boot.entity.Blog;
 import org.apache.ibatis.annotations.Insert;
@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author puppylpg on 2022/05/31
  */
-//@Mapper
+@Mapper
 public interface BlogMapper {
 
     @Select("select * from BLOG")
