@@ -1,7 +1,9 @@
 # java-examples
 Examples to use some functions or libs in java.
 
-Must use OpenJDK8 for some internal class usage:
+JDK version: 17, cheers~
+
+Must use OpenJDK8 for some internal class usage if `LoadConfigDemo`/`ProxyUtil`/`ShowClassLoaders` is not commented out:
 - download: https://github.com/ojdkbuild/ojdkbuild
 
 

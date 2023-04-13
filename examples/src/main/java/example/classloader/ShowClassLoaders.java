@@ -18,7 +18,7 @@ public class ShowClassLoaders {
         System.out.println("class loader for Integer: " + Integer.class.getClassLoader());
         // com.sun.crypto.provider.BlowfishCipher class is stored inside the <JAVA_HOME>/lib/ext/sunjce_provider.jar
         // so it was loaded with the extensions class loader
-        System.out.println("class loader for BlowfishCipher: " + com.sun.crypto.provider.BlowfishCipher.class.getClassLoader());
+//        System.out.println("class loader for BlowfishCipher: " + com.sun.crypto.provider.BlowfishCipher.class.getClassLoader());
         // Classes implemented by us, like the class with the main method, was loaded by system class loader
         System.out.println("class loader for this class: " + ShowClassLoaders.class.getClassLoader());
     }
