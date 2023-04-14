@@ -31,6 +31,7 @@ import org.apache.lucene.demo.knn.DemoEmbeddings;
 import org.apache.lucene.demo.knn.KnnVectorDict;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
+import org.apache.lucene.index.NumericDocValues;
 import org.apache.lucene.index.StoredFields;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.classic.QueryParser;
@@ -69,37 +70,24 @@ public class SearchFiles {
 
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
-                case "-index":
-                    index = args[++i];
-                    break;
-                case "-field":
-                    field = args[++i];
-                    break;
-                case "-queries":
-                    queries = args[++i];
-                    break;
-                case "-query":
-                    queryString = args[++i];
-                    break;
-                case "-repeat":
-                    repeat = Integer.parseInt(args[++i]);
-                    break;
-                case "-raw":
-                    raw = true;
-                    break;
-                case "-paging":
+                case "-index" -> index = args[++i];
+                case "-field" -> field = args[++i];
+                case "-queries" -> queries = args[++i];
+                case "-query" -> queryString = args[++i];
+                case "-repeat" -> repeat = Integer.parseInt(args[++i]);
+                case "-raw" -> raw = true;
+                case "-paging" -> {
                     hitsPerPage = Integer.parseInt(args[++i]);
                     if (hitsPerPage <= 0) {
                         System.err.println("There must be at least 1 hit per page.");
                         System.exit(1);
                     }
-                    break;
-                case "-knn_vector":
-                    knnVectors = Integer.parseInt(args[++i]);
-                    break;
-                default:
+                }
+                case "-knn_vector" -> knnVectors = Integer.parseInt(args[++i]);
+                default -> {
                     System.err.println("Unknown argument: " + args[i]);
                     System.exit(1);
+                }
             }
         }
 
@@ -206,6 +194,8 @@ public class SearchFiles {
 
             end = Math.min(hits.length, start + hitsPerPage);
 
+            // 获取这个索引的stored fields reader
+            // doc values怎么获取呢？
             StoredFields storedFields = searcher.storedFields();
             for (int i = start; i < end; i++) {
                 if (raw) { // output raw format
@@ -213,6 +203,7 @@ public class SearchFiles {
                     continue;
                 }
 
+                // 获取第n个document的stored fields
                 Document doc = storedFields.document(hits[i].doc);
                 String path = doc.get("path");
                 if (path != null) {

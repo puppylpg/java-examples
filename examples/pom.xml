@@ -15,7 +15,6 @@
 
     <properties>
         <dropwizard.metrics.version>3.2.5</dropwizard.metrics.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <proto.generated.dir>src/main/proto-generated</proto.generated.dir>
         <proto.src.dir>src/main/protobuf</proto.src.dir>
     </properties>
@@ -311,12 +310,6 @@
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-queryparser</artifactId>
             <version>9.5.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-analyzers-common -->
-        <dependency>
-            <groupId>org.apache.lucene</groupId>
-            <artifactId>lucene-analyzers-common</artifactId>
-            <version>8.11.2</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-demo -->
         <dependency>

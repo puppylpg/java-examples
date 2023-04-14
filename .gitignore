@@ -40,3 +40,6 @@ examples/src/main/proto-generated
 # hhz
 hhz/excel
 hhz/posts
+
+# lucene
+index

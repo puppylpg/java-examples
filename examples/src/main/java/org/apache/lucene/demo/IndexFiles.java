@@ -28,6 +28,8 @@ import java.nio.file.Paths;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.Date;
+import java.util.stream.Collectors;
+
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.demo.knn.DemoEmbeddings;
@@ -86,23 +88,12 @@ public class IndexFiles implements AutoCloseable {
         boolean create = true;
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
-                case "-index":
-                    indexPath = args[++i];
-                    break;
-                case "-docs":
-                    docsPath = args[++i];
-                    break;
-                case "-knn_dict":
-                    vectorDictSource = args[++i];
-                    break;
-                case "-update":
-                    create = false;
-                    break;
-                case "-create":
-                    create = true;
-                    break;
-                default:
-                    throw new IllegalArgumentException("unknown parameter " + args[i]);
+                case "-index" -> indexPath = args[++i];
+                case "-docs" -> docsPath = args[++i];
+                case "-knn_dict" -> vectorDictSource = args[++i];
+                case "-update" -> create = false;
+                case "-create" -> create = true;
+                default -> throw new IllegalArgumentException("unknown parameter " + args[i]);
             }
         }
 
@@ -245,6 +236,7 @@ public class IndexFiles implements AutoCloseable {
             // year/month/day/hour/minutes/seconds, down the resolution you require.
             // For example the long value 2011021714 would mean
             // February 17, 2011, 2-3 PM.
+            // 一定会存入doc_values
             doc.add(new LongField("modified", lastModified));
 
             // Add the contents of the file to a field named "contents".  Specify a Reader,
@@ -254,7 +246,9 @@ public class IndexFiles implements AutoCloseable {
             doc.add(
                     new TextField(
                             "contents",
-                            new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8))));
+                            new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8)).lines().collect(Collectors.joining()),
+                            // 存一下内容
+                            Field.Store.YES));
 
             if (demoEmbeddings != null) {
                 try (InputStream in = Files.newInputStream(file)) {
