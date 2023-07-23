@@ -10,6 +10,6 @@ public class TreeMain {
         TreeNode treeNode = StrToTreeNode.createTree(tree.substring(1, tree.length() - 1));
 
         Solution solution = new Solution();
-        solution.maxPathSum(treeNode);
+        solution.diameterOfBinaryTree(treeNode);
     }
 }
