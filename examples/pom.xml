@@ -311,11 +311,23 @@
             <artifactId>lucene-queryparser</artifactId>
             <version>9.5.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-highlighter -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-highlighter</artifactId>
+            <version>9.5.0</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-demo -->
         <dependency>
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-demo</artifactId>
             <version>9.5.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/cn.shenyanchao.ik-analyzer/ik-analyzer -->
+        <dependency>
+            <groupId>cn.shenyanchao.ik-analyzer</groupId>
+            <artifactId>ik-analyzer</artifactId>
+            <version>9.0.0</version>
         </dependency>
 
         <dependency>
