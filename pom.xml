@@ -11,6 +11,7 @@
 
     <modules>
         <module>examples</module>
+        <module>8-plus</module>
         <module>java-logs</module>
         <module>algorithm</module>
         <module>mybatis</module>
