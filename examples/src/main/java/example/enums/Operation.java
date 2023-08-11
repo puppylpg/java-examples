@@ -23,18 +23,13 @@ public enum Operation {
     public double calculate(double x, double y) {
         // 'this' in Enum is an instantiated object,
         // in this case such as: PLUS/MINUS/TIMES/DIVEDE/UNKNOWN
-        switch (this) {
-            case PLUS:
-                return x + y;
-            case MINUS:
-                return x - y;
-            case TIMES:
-                return x * y;
-            case DIVIDE:
-                return x / y;
-            default:
-                throw new AssertionError("Unknown operation: " + this + " , name is: " + this.name);
-        }
+        return switch (this) {
+            case PLUS -> x + y;
+            case MINUS -> x - y;
+            case TIMES -> x * y;
+            case DIVIDE -> x / y;
+            default -> throw new AssertionError("Unknown operation: " + this + " , name is: " + this.name);
+        };
     }
 
     public static void main(String [] args) {
