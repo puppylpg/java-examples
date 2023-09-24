@@ -6,18 +6,12 @@
 
     <parent>
         <groupId>cn.com.puppylpg</groupId>
-        <artifactId>java-examples</artifactId>
+        <artifactId>8-plus</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>8-plus</artifactId>
+    <artifactId>normal</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>normal</module>
-        <module>java9-module</module>
-    </modules>
 
 
 </project>
