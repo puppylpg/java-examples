@@ -22,7 +22,7 @@ Hello world!
 Hello INTERNAL world!
 ```
 
-加入第三方非module依赖commons-lang3，也使用`-p`把它搞成automic module：
+加入第三方非module依赖commons-lang3，也使用`-p`把它搞成automatic module：
 ```bash
 /home/pichu/.jdks/openjdk-20.0.2/bin/java -javaagent:/ssd/JetBrains/Toolbox/intellij-idea-ultimate/lib/idea_rt.jar=46661:/ssd/JetBrains/Toolbox/intellij-idea-ultimate/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -p /ssd/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar:/home/pichu/Codes/Java/mine/java-examples/8-plus/java9-module/module-callee/target/classes -m module.callee/com.puppylpg.callee.Main
 

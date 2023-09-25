@@ -13,5 +13,12 @@
     <artifactId>normal</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>11.0.0-M7</version>
+        </dependency>
+    </dependencies>
 
 </project>
