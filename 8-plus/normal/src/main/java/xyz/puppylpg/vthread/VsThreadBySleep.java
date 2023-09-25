@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
  *
  * @author liuhaibo on 2023/09/25
  */
-public class VsThread {
+public class VsThreadBySleep {
     private static final LongAdder COUNTER = new LongAdder();
     private static final int ITERATION = 100000;
 
