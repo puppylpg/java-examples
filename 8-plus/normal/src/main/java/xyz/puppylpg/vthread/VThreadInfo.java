@@ -11,6 +11,7 @@ public class VThreadInfo {
             System.out.println(Thread.currentThread());
         });
 
+        // 也可以用countdown latch：https://mail.openjdk.org/pipermail/loom-dev/2023-May/005509.html
         v.join();
     }
 }
