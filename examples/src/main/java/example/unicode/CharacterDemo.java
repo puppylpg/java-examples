@@ -14,6 +14,34 @@ public class CharacterDemo {
         supplementaryPlaneCharacterLength();
         charToInt();
         charMethod();
+
+        traverseByCodePoints();
+    }
+
+    private static void traverseByCodePoints() {
+        // 逐字符遍历
+        // 😋hello😋
+        String s = "\uD83D\uDE0Bhello\uD83D\uDE0B";
+        s.codePoints().forEach(
+                points -> System.out.println(Character.toChars(points))
+        );
+
+        int offset = 0;
+        while (offset < s.length()) {
+            int points = s.codePointAt(offset);
+            System.out.println(Character.toChars(points));
+            offset += Character.charCount(points);
+        }
+
+        // 输出char+\n，解释不出来，显示为`?`
+        for (char c : s.toCharArray()) {
+            System.out.println(c);
+        }
+
+        // 不换行的话就可以，让两个char连起来就能表示emoji
+        for (char c : s.toCharArray()) {
+            System.out.print(c);
+        }
     }
 
     private static void convertSupplementaryPlaneCharacter() {
