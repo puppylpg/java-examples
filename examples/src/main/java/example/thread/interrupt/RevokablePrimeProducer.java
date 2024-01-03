@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * @author liuhaibo on 2018/11/15
+ * @author puppylpg on 2018/11/15
  */
 public class RevokablePrimeProducer extends Thread {
 

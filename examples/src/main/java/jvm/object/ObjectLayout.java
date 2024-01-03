@@ -4,7 +4,7 @@ import org.openjdk.jol.info.ClassLayout;
 import org.openjdk.jol.vm.VM;
 
 /**
- * @author liuhaibo on 2023/08/24
+ * @author puppylpg on 2023/08/24
  */
 public class ObjectLayout {
 

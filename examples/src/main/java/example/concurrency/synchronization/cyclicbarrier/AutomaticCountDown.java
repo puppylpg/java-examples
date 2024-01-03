@@ -8,7 +8,7 @@ import java.util.concurrent.CyclicBarrier;
  * {@link java.util.concurrent.CountDownLatch}countdown的和await的不是同一波人，是“一波人给另一波人放行”。
  * {@link CyclicBarrier}则是同一波人，凑购数了一起冲破barrier继续做后面的事情。是“自己给自己放行”，“凑够一堆过马路”233
  *
- * @author liuhaibo on 2022/05/20
+ * @author puppylpg on 2022/05/20
  */
 public class AutomaticCountDown {
 

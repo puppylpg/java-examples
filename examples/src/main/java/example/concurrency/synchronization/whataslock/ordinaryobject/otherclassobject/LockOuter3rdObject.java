@@ -7,7 +7,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * 使用别的类的对象作为锁，且这个对象是全局独有的，那和使用class object作为锁没区别，大家都是全局独有的。
  *
- * @author liuhaibo on 2022/05/18
+ * @author puppylpg on 2022/05/18
  */
 public class LockOuter3rdObject extends LockBase {
 

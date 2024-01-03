@@ -4,7 +4,7 @@ import org.slf4j.bridge.SLF4JBridgeHandler;
 import java.util.logging.Logger;
 
 /**
- * @author liuhaibo on 2021/12/24
+ * @author puppylpg on 2021/12/24
  */
 public class AllLog {
 

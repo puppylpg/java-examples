@@ -3,7 +3,7 @@ package example.concurrency.executor;
 import java.util.concurrent.Executor;
 
 /**
- * @author liuhaibo on 2018/11/14
+ * @author puppylpg on 2018/11/14
  */
 public class WithinThreadExecutor implements Executor {
 

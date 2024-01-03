@@ -3,7 +3,7 @@ package xyz.puppylpg.sealed;
 /**
  * no subclass, must be final
  *
- * @author liuhaibo on 2023/08/10
+ * @author puppylpg on 2023/08/10
  */
 public final class Junior extends Coder {
 

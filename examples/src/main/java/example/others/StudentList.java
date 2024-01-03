@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * 实现{@link Iterable}接口，是为了能直接for循环遍历其中的变量T。
  *
- * @author liuhaibo on 2018/02/01
+ * @author puppylpg on 2018/02/01
  */
 public class StudentList implements Iterable<Student> {
 

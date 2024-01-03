@@ -3,7 +3,7 @@ package example.concurrency.threadlocal;
 /**
  * 这是一个线程安全的计数器。
  *
- * @author liuhaibo on 2017/11/21
+ * @author puppylpg on 2017/11/21
  */
 public class ThreadLocalCounter {
 

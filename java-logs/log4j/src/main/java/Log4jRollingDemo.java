@@ -1,7 +1,7 @@
 import org.apache.log4j.Logger;
 
 /**
- * @author liuhaibo on 2017/12/02
+ * @author puppylpg on 2017/12/02
  */
 public class Log4jRollingDemo {
 

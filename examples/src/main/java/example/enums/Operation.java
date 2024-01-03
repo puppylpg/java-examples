@@ -3,7 +3,7 @@ package example.enums;
 import lombok.Getter;
 
 /**
- * @author liuhaibo on 2017/12/27
+ * @author puppylpg on 2017/12/27
  */
 public enum Operation {
 

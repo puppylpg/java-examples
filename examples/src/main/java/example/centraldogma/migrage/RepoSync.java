@@ -9,7 +9,7 @@ import java.util.Set;
 /**
  * 注意事项见{@link ProjectSync}。
  *
- * @author liuhaibo on 2019/11/07
+ * @author puppylpg on 2019/11/07
  */
 public class RepoSync extends Sync {
 

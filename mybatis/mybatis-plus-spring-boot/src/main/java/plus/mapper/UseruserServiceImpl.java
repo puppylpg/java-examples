@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import plus.Useruser;
 
 /**
- * @author liuhaibo on 2022/06/10
+ * @author puppylpg on 2022/06/10
  */
 @Service
 public class UseruserServiceImpl extends ServiceImpl<UseruserMapper, Useruser> implements UseruserService {

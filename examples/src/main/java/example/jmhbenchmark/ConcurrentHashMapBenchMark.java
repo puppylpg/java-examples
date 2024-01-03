@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.concurrent.*;
 
 /**
- * @author liuhaibo on 2018/06/06
+ * @author puppylpg on 2018/06/06
  */
 public class ConcurrentHashMapBenchMark {
 

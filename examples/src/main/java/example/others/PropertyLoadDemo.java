@@ -16,7 +16,7 @@ import java.util.Properties;
  * 配置跨行时，使用'\'，下一行的内容相当于直接替换了这一行的'\'（所以下一行就算是#/!开头，也不会作为注释）；
  * 不支持汉字，只支持 ISO 8859-1 字符集；
  *
- * @author liuhaibo on 2019/12/25
+ * @author puppylpg on 2019/12/25
  */
 public class PropertyLoadDemo {
 

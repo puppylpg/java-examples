@@ -19,7 +19,7 @@ import java.lang.management.ManagementFactory;
  * 2. 接口中，所有get/set开头的方法被认为是操作属性的getter/setter，可在Jconsole里直接操作属性；
  * 3. 接口中，非get/set开头的public方法可在Jconsole里直接调用，直接在程序运行时操作程序！
  *
- * @author liuhaibo on 2018/01/04
+ * @author puppylpg on 2018/01/04
  */
 public class MBeanDemo {
 

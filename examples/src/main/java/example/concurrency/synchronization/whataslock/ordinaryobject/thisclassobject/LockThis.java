@@ -8,7 +8,7 @@ import java.util.concurrent.CountDownLatch;
  * 把this作为锁，实际是把这个类new的这个对象（this）作为锁。
  * 如果new了多个对象，就没法在他们之间互斥了。
  *
- * @author liuhaibo on 2022/05/18
+ * @author puppylpg on 2022/05/18
  */
 public class LockThis extends LockBase {
 

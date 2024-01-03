@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @author liuhaibo on 2017/11/17
+ * @author puppylpg on 2017/11/17
  */
 public class DistinctByWrapper {
 

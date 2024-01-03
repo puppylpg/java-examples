@@ -14,7 +14,7 @@ import java.util.BitSet;
  * 缺陷：如果存储的数据很大，最大为{@link Integer#MAX_VALUE}，需要{@link Integer#MAX_VALUE}个bit，
  * 也即{@link Integer#MAX_VALUE}/64个long大小的空间。
  *
- * @author liuhaibo on 2018/08/14
+ * @author puppylpg on 2018/08/14
  */
 public class BitSetDemo {
 

@@ -7,7 +7,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * 把class作为锁其实就是用Class对象当锁。
  *
- * @author liuhaibo on 2022/05/18
+ * @author puppylpg on 2022/05/18
  */
 public class LockClass extends LockBase {
 

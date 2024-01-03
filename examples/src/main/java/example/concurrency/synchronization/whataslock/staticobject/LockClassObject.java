@@ -12,7 +12,7 @@ import java.util.concurrent.CountDownLatch;
  * <p>
  * - https://rules.sonarsource.com/java/tag/multi-threading/RSPEC-3067
  *
- * @author liuhaibo on 2022/05/18
+ * @author puppylpg on 2022/05/18
  */
 @Deprecated
 public class LockClassObject extends LockBase {

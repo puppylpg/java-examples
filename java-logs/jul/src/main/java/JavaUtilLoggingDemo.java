@@ -1,7 +1,7 @@
 import java.util.logging.Logger;
 
 /**
- * @author liuhaibo on 2021/08/10
+ * @author puppylpg on 2021/08/10
  */
 public class JavaUtilLoggingDemo {
 

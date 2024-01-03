@@ -13,7 +13,7 @@ import java.util.ArrayList;
  *
  * 只有不想使用调用方{@link President}本身的任何东西，这时候才会搞一个和调用方毫无关联的外部类（或者一个静态嵌套类）。
  *
- * @author liuhaibo on 2018/04/12
+ * @author puppylpg on 2018/04/12
  */
 public class President {
 

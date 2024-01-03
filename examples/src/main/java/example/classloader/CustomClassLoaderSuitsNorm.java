@@ -17,7 +17,7 @@ import java.io.InputStream;
  * <p>
  * {@link CustomClassLoader}就没有按照规范去搞，所以override了{@link ClassLoader#loadClass(String)}。
  *
- * @author liuhaibo on 2019/01/15
+ * @author puppylpg on 2019/01/15
  */
 public class CustomClassLoaderSuitsNorm extends ClassLoader {
 

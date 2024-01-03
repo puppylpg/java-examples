@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @author liuhaibo on 2019/12/19
+ * @author puppylpg on 2019/12/19
  */
 public class JoinString {
 

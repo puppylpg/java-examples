@@ -7,7 +7,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * 把static method作为锁，其实也是把class object作为锁。
  *
- * @author liuhaibo on 2022/05/18
+ * @author puppylpg on 2022/05/18
  */
 public class LockStaticMethod extends LockBase {
 

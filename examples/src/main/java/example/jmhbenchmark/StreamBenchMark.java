@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 /**
  * {@link Setup}和{@link TearDown}必须用在{@link State}标识的类内部。
  *
- * @author liuhaibo on 2018/06/06
+ * @author puppylpg on 2018/06/06
  */
 @State(Scope.Thread)
 @BenchmarkMode({Mode.AverageTime})

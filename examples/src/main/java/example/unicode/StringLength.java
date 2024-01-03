@@ -9,7 +9,7 @@ import java.nio.charset.StandardCharsets;
 /**
  * 使用ByteBuffer、CharBuffer和Charset字符转字节，并按照规定字节数截断。
  *
- * @author liuhaibo on 2019/11/29
+ * @author puppylpg on 2019/11/29
  */
 public class StringLength {
 

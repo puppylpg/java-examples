@@ -8,7 +8,7 @@ import org.ehcache.xml.XmlConfiguration;
 import java.net.URL;
 
 /**
- * @author liuhaibo on 2020/04/30
+ * @author puppylpg on 2020/04/30
  */
 public class EhcacheXmlService {
 

@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 
 /**
- * @author liuhaibo on 2018/4/10
+ * @author puppylpg on 2018/4/10
  */
 public class Manual {
 

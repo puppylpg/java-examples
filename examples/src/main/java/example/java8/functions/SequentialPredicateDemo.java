@@ -6,7 +6,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 /**
- * @author liuhaibo on 2020/04/23
+ * @author puppylpg on 2020/04/23
  */
 public class SequentialPredicateDemo {
 

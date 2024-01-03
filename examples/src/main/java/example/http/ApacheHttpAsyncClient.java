@@ -18,7 +18,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
 /**
- * @author liuhaibo on 2018/10/08
+ * @author puppylpg on 2018/10/08
  */
 public class ApacheHttpAsyncClient {
 

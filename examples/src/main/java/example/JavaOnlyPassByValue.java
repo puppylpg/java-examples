@@ -8,7 +8,7 @@ import javax.annotation.Nonnull;
  * Java仅值传递。Java有指针，只是不能获取指针的地址，所以没有c中复杂的&取地址之类的，搞得跟没指针、pass-by-reference似的。
  * 其实不是。
  *
- * @author liuhaibo on 2019/01/15
+ * @author puppylpg on 2019/01/15
  */
 public class JavaOnlyPassByValue {
 

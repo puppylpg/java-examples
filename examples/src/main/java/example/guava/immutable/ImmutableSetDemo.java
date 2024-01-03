@@ -3,7 +3,7 @@ package example.guava.immutable;
 import com.google.common.collect.ImmutableSet;
 
 /**
- * @author liuhaibo on 2018/10/23
+ * @author puppylpg on 2018/10/23
  */
 public class ImmutableSetDemo {
 

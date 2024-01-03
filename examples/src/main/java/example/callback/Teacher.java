@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * 老师是需要被回调的对象，因为他需要学生在想出来之后告诉他答案。
  *
- * @author liuhaibo on 2018/04/11
+ * @author puppylpg on 2018/04/11
  */
 public class Teacher implements IListener {
 

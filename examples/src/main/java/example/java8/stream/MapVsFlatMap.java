@@ -6,7 +6,7 @@ import java.util.Optional;
 import java.util.function.Function;
 
 /**
- * @author liuhaibo on 2017/11/15
+ * @author puppylpg on 2017/11/15
  */
 public class MapVsFlatMap {
     public static void main(String [] args) {

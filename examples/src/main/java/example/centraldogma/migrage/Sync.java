@@ -6,7 +6,7 @@ import lombok.Setter;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author liuhaibo on 2019/11/07
+ * @author puppylpg on 2019/11/07
  */
 public class Sync {
 

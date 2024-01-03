@@ -3,7 +3,7 @@ package example.concurrency.producerconsumer.advanced;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * @author liuhaibo on 2018/06/07
+ * @author puppylpg on 2018/06/07
  */
 public class Consumer implements Runnable {
     private final BlockingQueue<Integer> queue;

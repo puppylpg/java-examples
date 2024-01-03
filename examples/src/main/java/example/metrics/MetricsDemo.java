@@ -5,7 +5,7 @@ import com.codahale.metrics.*;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author liuhaibo on 2017/12/01
+ * @author puppylpg on 2017/12/01
  */
 public class MetricsDemo {
 
@@ -13,7 +13,7 @@ public class MetricsDemo {
 
         //////////////////////////////////// START GET REGISTRY //////////////////////////////////////////////
 
-        final String GUI_LIN = "liuguilin";
+        final String GUI_LIN = "liubobo";
 
         MetricRegistry registry1 = new MetricRegistry();
         // get Metrics in a better way
@@ -48,8 +48,8 @@ public class MetricsDemo {
         //////////////////////////////////// END MARK METRICS //////////////////////////////////////////////
 
         // registers : singleton & thread-safe
-        SharedMetricRegistries.add("liuhaibo", registry1);
-        MetricRegistry otherRegister = SharedMetricRegistries.getOrCreate("liuhaibo");
+        SharedMetricRegistries.add("puppylpg", registry1);
+        MetricRegistry otherRegister = SharedMetricRegistries.getOrCreate("puppylpg");
 
         //////////////////////////////////// START GET REPORTER AND REGISTER A REGISTRY //////////////////////
 

@@ -3,7 +3,7 @@ package example.bytes;
 import java.nio.charset.StandardCharsets;
 
 /**
- * @author liuhaibo on 2018/01/03
+ * @author puppylpg on 2018/01/03
  */
 public class BytesDemo {
     private static String str = "Hello, world!";

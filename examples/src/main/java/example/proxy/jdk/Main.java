@@ -18,7 +18,7 @@ import java.lang.reflect.*;
  *
  * 可以查看生成的TestProxyGen，jvm给代理对象生成的执行逻辑。
  *
- * @author liuhaibo on 2018/04/18
+ * @author puppylpg on 2018/04/18
  */
 public class Main {
 

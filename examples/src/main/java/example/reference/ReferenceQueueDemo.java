@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @author liuhaibo on 2018/03/06
+ * @author puppylpg on 2018/03/06
  */
 public class ReferenceQueueDemo {
 

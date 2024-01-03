@@ -12,7 +12,7 @@ import java.util.Date;
  * <p>
  * 这里为了演示，设置其为非守护线程。
  *
- * @author liuhaibo on 2018/01/11
+ * @author puppylpg on 2018/01/11
  */
 public class MonitorSingleFile {
 

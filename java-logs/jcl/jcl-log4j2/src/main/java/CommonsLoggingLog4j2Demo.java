@@ -2,7 +2,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 /**
- * @author liuhaibo on 2021/08/10
+ * @author puppylpg on 2021/08/10
  */
 public class CommonsLoggingLog4j2Demo {
 

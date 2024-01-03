@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  *
  * 先改掉一个错误说法：“锁xx”，应该说是“把xx作为锁”。实际是“把xx作为锁，去锁住某些共享资源”。
  *
- * @author liuhaibo on 2022/05/19
+ * @author puppylpg on 2022/05/19
  */
 public abstract class LockBase {
 

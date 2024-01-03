@@ -5,7 +5,7 @@ import org.apache.commons.io.monitor.FileAlterationListenerAdaptor;
 import java.io.File;
 
 /**
- * @author liuhaibo on 2018/01/08
+ * @author puppylpg on 2018/01/08
  */
 public class ConfigFileChangeListener extends FileAlterationListenerAdaptor {
     private FileChange change;

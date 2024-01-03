@@ -2,7 +2,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @author liuhaibo on 2017/12/02
+ * @author puppylpg on 2017/12/02
  */
 public class Slf4jLog4j2Demo {
 

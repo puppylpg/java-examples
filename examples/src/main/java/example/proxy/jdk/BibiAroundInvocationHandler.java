@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 /**
  * 负责在代理对象的方法调用前后bibi一番.
  *
- * @author liuhaibo on 2018/04/19
+ * @author puppylpg on 2018/04/19
  */
 @AllArgsConstructor
 public class BibiAroundInvocationHandler implements InvocationHandler {

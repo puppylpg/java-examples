@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
- * @author liuhaibo on 2019/12/26
+ * @author puppylpg on 2019/12/26
  */
 public class SimpleDateFormatDemo {
 

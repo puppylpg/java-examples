@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.concurrent.*;
 
 /**
- * @author liuhaibo on 2017/11/28
+ * @author puppylpg on 2017/11/28
  */
 public class UsageOfDelayQueue {
     private static final int STUDENT_NUM = 10;

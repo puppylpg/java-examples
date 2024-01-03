@@ -16,7 +16,7 @@ import java.util.concurrent.ExecutionException;
  * <p>
  * Note：如果更新的内容和原始内容一致，dogma会拒绝更新并抛异常ExecutionException(RedundantChangeException)。
  *
- * @author liuhaibo on 2019/11/07
+ * @author puppylpg on 2019/11/07
  */
 public class FileSync extends Sync {
 

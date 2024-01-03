@@ -1,7 +1,7 @@
 package example.others;
 
 /**
- * @author liuhaibo on 2017/12/07
+ * @author puppylpg on 2017/12/07
  */
 public class StringDemo {
 

@@ -5,7 +5,7 @@ import xyz.puppylpg.sealed.Junior;
 import xyz.puppylpg.sealed.Person;
 
 /**
- * @author liuhaibo on 2023/08/10
+ * @author puppylpg on 2023/08/10
  */
 public class InstanceOf {
 

@@ -1,7 +1,7 @@
 package example.classloader;
 
 /**
- * @author liuhaibo on 2019/01/04
+ * @author puppylpg on 2019/01/04
  */
 public class ClassLoaderNameSpace {
 

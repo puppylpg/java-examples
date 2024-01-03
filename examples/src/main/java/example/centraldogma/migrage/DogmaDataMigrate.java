@@ -21,7 +21,7 @@ import java.util.concurrent.ExecutionException;
  *
  * 用法：修改src dogma host/port和des dogma host/port，运行即可。
  *
- * @author liuhaibo on 2019/11/06
+ * @author puppylpg on 2019/11/06
  */
 public class DogmaDataMigrate {
 

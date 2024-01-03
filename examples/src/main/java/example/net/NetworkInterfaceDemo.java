@@ -46,7 +46,7 @@ import java.util.List;
  * 6: vboxnet0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
  * link/ether 0a:00:27:00:00:00 brd ff:ff:ff:ff:ff:ff
  *
- * @author liuhaibo on 2019/08/02
+ * @author puppylpg on 2019/08/02
  */
 public class NetworkInterfaceDemo {
 

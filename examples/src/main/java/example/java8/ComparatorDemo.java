@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * @author liuhaibo on 2021/07/28
+ * @author puppylpg on 2021/07/28
  */
 public class ComparatorDemo {
 

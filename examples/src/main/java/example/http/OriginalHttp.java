@@ -14,7 +14,7 @@ import java.net.URL;
  * <p>
  * Operations that depend on being connected, like getInputStream, getOutputStream, etc, will implicitly perform the connection, if necessary.
  *
- * @author liuhaibo on 2018/01/03
+ * @author puppylpg on 2018/01/03
  */
 public class OriginalHttp {
 

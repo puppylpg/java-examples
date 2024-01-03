@@ -3,7 +3,7 @@ package example.exception;
 import java.util.Locale;
 
 /**
- * @author liuhaibo on 2019/12/25
+ * @author puppylpg on 2019/12/25
  */
 public class StackTraceDemo {
 

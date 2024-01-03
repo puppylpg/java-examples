@@ -11,7 +11,7 @@ import java.util.Queue;
  * @see example.concurrency.producerconsumer.immature.SpinningBoundedBuffer
  * @see example.concurrency.producerconsumer.immature.SleepyBoundedBuffer
  *
- * @author liuhaibo on 2018/4/10
+ * @author puppylpg on 2018/4/10
  */
 public class Producer extends Thread {
 

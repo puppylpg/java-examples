@@ -10,7 +10,7 @@ import java.util.Map;
  * {@link Multimap} - 一key对多个value
  * {@link ClassToInstanceMap} - class对instance
  *
- * @author liuhaibo on 2019/01/17
+ * @author puppylpg on 2019/01/17
  */
 public class GuavaMaps {
 

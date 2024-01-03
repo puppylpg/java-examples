@@ -9,7 +9,7 @@ import java.io.IOException;
  * 且在随后的关闭外部资源过程中，又遭遇了异常，那么你catch到的将会是对外部资源进行处理时遭遇的异常，
  * 关闭资源时遭遇的异常将被“抑制”但不是丢弃，通过异常的getSuppressed方法，可以提取出被抑制的异常。
  *
- * @author liuhaibo on 2019/11/07
+ * @author puppylpg on 2019/11/07
  */
 public class TryWithResourceDemo {
 

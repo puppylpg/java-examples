@@ -7,7 +7,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * 把普通方法作为锁，其实就是把this作为锁。
  *
- * @author liuhaibo on 2022/05/18
+ * @author puppylpg on 2022/05/18
  */
 public class LockMethod extends LockBase {
 

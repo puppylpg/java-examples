@@ -3,7 +3,7 @@ package example.java8.functions;
 import java.util.function.*;
 
 /**
- * @author liuhaibo on 2017/11/19
+ * @author puppylpg on 2017/11/19
  */
 public class FunctionToReplaceAll {
 

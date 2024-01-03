@@ -10,7 +10,7 @@ import java.util.stream.IntStream;
  *
  * 结果：使用并行流确实能让所有核都跑起来，但是要远远慢于非并行流……
  * 结论：数据太简单了，分解去计算，最后再合并的开销远大于直接计算这个数的开销……
- * @author liuhaibo on 2018/03/12
+ * @author puppylpg on 2018/03/12
  */
 public class ParallellStream {
 

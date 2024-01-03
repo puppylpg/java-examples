@@ -4,7 +4,7 @@ import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
 
 /**
- * @author liuhaibo on 2018/03/06
+ * @author puppylpg on 2018/03/06
  */
 public class WeakRefDemo {
 

@@ -1,7 +1,7 @@
 package example.innerclass;
 
 /**
- * @author liuhaibo on 2023/08/11
+ * @author puppylpg on 2023/08/11
  */
 public class Outer {
 

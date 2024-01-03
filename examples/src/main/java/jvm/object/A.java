@@ -1,7 +1,7 @@
 package jvm.object;
 
 /**
- * @author liuhaibo on 2023/08/24
+ * @author puppylpg on 2023/08/24
  */
 public class A {
 

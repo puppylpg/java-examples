@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.List;
 
 /**
- * @author liuhaibo on 2017/12/26
+ * @author puppylpg on 2017/12/26
  */
 public class StaticInnerClass {
 

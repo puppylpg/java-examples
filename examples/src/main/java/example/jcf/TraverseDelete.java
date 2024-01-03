@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * @author liuhaibo on 2020/04/20
+ * @author puppylpg on 2020/04/20
  */
 public class TraverseDelete {
 

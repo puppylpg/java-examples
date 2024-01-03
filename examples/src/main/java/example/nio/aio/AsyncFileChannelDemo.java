@@ -14,7 +14,7 @@ import java.util.concurrent.Future;
 /**
  * FileChannel只能是阻塞的。所以Java7引入了{@link java.nio.channels.AsynchronousFileChannel}。
  *
- * @author liuhaibo on 2019/09/26
+ * @author puppylpg on 2019/09/26
  */
 public class AsyncFileChannelDemo {
 

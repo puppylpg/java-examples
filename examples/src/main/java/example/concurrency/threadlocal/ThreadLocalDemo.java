@@ -1,7 +1,7 @@
 package example.concurrency.threadlocal;
 
 /**
- * @author liuhaibo on 2018/05/23
+ * @author puppylpg on 2018/05/23
  */
 public class ThreadLocalDemo {
 

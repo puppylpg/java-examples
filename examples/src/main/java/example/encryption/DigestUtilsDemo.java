@@ -7,7 +7,7 @@ import java.nio.charset.StandardCharsets;
 /**
  * {@link DigestUtils}: Operations to simplify common {@link java.security.MessageDigest} tasks.
  *
- * @author liuhaibo on 2018/01/03
+ * @author puppylpg on 2018/01/03
  */
 public class DigestUtilsDemo {
 

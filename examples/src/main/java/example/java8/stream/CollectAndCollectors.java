@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
  *
  * Sure, there is another collect() in Stream.
  *
- * @author liuhaibo on 2017/11/23
+ * @author puppylpg on 2017/11/23
  */
 public class CollectAndCollectors {
 

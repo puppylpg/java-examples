@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * @author liuhaibo on 2018/04/12
+ * @author puppylpg on 2018/04/12
  */
 @AllArgsConstructor
 public class Student {

@@ -18,7 +18,7 @@ import java.util.concurrent.*;
  * learn methods in {@link ExecutorService};
  * learn to close a {@link ExecutorService} in recommended way;
  *
- * @author liuhaibo on 2017/12/19
+ * @author puppylpg on 2017/12/19
  */
 public class ExecutorDemo {
 

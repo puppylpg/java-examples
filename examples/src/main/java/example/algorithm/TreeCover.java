@@ -2,7 +2,7 @@ package example.algorithm;
 
 
 /**
- * @author liuhaibo on 2020/11/24
+ * @author puppylpg on 2020/11/24
  */
 public class TreeCover {
 

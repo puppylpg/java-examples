@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
  * 2. use Predicate to assert key;
  * 3. use filter() to filter keys.
  *
- * @author liuhaibo on 2017/11/17
+ * @author puppylpg on 2017/11/17
  */
 public class DistinctByFilterAndLambda {
 

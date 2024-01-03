@@ -17,7 +17,7 @@ import static java.time.temporal.ChronoUnit.SECONDS;
  * 虚线程的意义在于：使用虚线程（可以是直接new，也可以是虚线程池，当然我们倾向于线程池）跑blocking任务更高效，所以不必使用reactive框架继续分解任务了。
  * 并不是不需要异步提交了，毕竟使用线程池就需要异步提交。
  *
- * @author liuhaibo on 2023/09/25
+ * @author puppylpg on 2023/09/25
  */
 public class VsThreadByHttpClient {
 

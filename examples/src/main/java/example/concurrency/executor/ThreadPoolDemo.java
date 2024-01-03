@@ -8,7 +8,7 @@ import java.util.concurrent.*;
 /**
  * 不同的ThreadPool policy
  *
- * @author liuhaibo on 2021/10/15
+ * @author puppylpg on 2021/10/15
  */
 public class ThreadPoolDemo {
 

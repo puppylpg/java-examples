@@ -1,7 +1,7 @@
 package example.concurrency.forkjoin;
 
 /**
- * @author liuhaibo on 2019/11/25
+ * @author puppylpg on 2019/11/25
  */
 public class BaseCalculator {
 

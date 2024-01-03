@@ -16,7 +16,7 @@ import java.util.concurrent.Phaser;
  * <p>
  * - https://stackoverflow.com/a/32442754/7676237
  *
- * @author liuhaibo on 2022/05/20
+ * @author puppylpg on 2022/05/20
  */
 public class CountUpAndDownLatch {
 

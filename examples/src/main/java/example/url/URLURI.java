@@ -24,7 +24,7 @@ import java.net.URL;
  * 进而获取HttpURLConnection等。获取handler的方式就是sun.net.www.protocol+scheme，如果scheme不是Java支持的protocol，自然没有相应的package，
  * 就找不到类，无法实例化。所以创建URL出错。
  *
- * @author liuhaibo on 2019/09/27
+ * @author puppylpg on 2019/09/27
  */
 public class URLURI {
 

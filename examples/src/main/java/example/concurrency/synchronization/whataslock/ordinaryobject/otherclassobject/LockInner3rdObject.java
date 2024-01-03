@@ -7,7 +7,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * 使用别的类的对象作为锁，且这个对象是类独有的，那和使用this作为锁没区别。
  *
- * @author liuhaibo on 2022/05/18
+ * @author puppylpg on 2022/05/18
  */
 public class LockInner3rdObject extends LockBase {
 

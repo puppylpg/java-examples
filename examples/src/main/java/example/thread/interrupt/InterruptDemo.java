@@ -3,7 +3,7 @@ package example.thread.interrupt;
 /**
  * A thread can't close another thread, but can interrupt it.
  *
- * @author liuhaibo on 2018/06/08
+ * @author puppylpg on 2018/06/08
  */
 public class InterruptDemo {
 

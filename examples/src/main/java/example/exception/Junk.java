@@ -23,7 +23,7 @@ package example.exception;
  *
  * 最离谱的是：exception getCause的时候，return (cause==this ? null : cause)……如果e=this，返回null……说明没e了……那为啥不一开始就设为null或者EMPTY……
  *
- * @author liuhaibo on 2019/07/29
+ * @author puppylpg on 2019/07/29
  */
 public class Junk {
 

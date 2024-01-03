@@ -11,7 +11,7 @@ import java.util.concurrent.*;
  * 提交一大堆并行任务，然后使用{@link CompletionService}及时获取{@link Future}结果。
  * 避免了轮询。
  *
- * @author liuhaibo on 2018/06/13
+ * @author puppylpg on 2018/06/13
  */
 public class CompletionServiceDemo {
 

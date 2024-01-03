@@ -4,7 +4,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * @author liuhaibo on 2018/06/07
+ * @author puppylpg on 2018/06/07
  */
 public class Advanced {
 

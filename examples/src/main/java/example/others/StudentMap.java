@@ -15,7 +15,7 @@ import java.util.HashMap;
  * 3. StringList和NameList如果分别在两个依赖包里，共用的时候，一个只能写全路径以示区分。且，StringList中的sortList(StringList)方法，NameList不能用；
  * 4. 不可重用，既然继承了ArrayList，那么当需要使用LinkedList的时候，StringList就无法重用了。
  *
- * @author liuhaibo on 2018/01/31
+ * @author puppylpg on 2018/01/31
  */
 @Deprecated
 public class StudentMap extends HashMap<String, Student> {

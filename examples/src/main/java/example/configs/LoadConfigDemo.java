@@ -16,7 +16,7 @@
 //import java.util.Properties;
 //
 ///**
-// * @author liuhaibo on 2018/01/04
+// * @author puppylpg on 2018/01/04
 // */
 //public class LoadConfigDemo {
 //

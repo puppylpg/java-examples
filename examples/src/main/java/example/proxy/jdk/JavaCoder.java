@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import org.apache.commons.lang3.RandomUtils;
 
 /**
- * @author liuhaibo on 2018/04/18
+ * @author puppylpg on 2018/04/18
  */
 @AllArgsConstructor
 public class JavaCoder implements Coder {

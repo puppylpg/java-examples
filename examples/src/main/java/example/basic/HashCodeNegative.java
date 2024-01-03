@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 
 /**
  * hashcode可能是负的……
- * @author liuhaibo on 2022/10/10
+ * @author puppylpg on 2022/10/10
  */
 public class HashCodeNegative {
 

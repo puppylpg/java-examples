@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  * 在处理该异常的时候，相当于直接把该异常吞了。此时interrupt flag为false，在子线程中检测中断flag的时候，不能成功退出线程，
  * 直到i=11的时候，该子线程将自己的interrupt flag设为true，才再次在检查中断的时候，成功退出子线程。
  *
- * @author liuhaibo on 2018/06/13
+ * @author puppylpg on 2018/06/13
  */
 @Slf4j
 public class InterruptFailure extends Thread {

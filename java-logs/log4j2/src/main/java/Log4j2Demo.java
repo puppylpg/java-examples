@@ -2,7 +2,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * @author liuhaibo on 2017/12/02
+ * @author puppylpg on 2017/12/02
  */
 public class Log4j2Demo {
 

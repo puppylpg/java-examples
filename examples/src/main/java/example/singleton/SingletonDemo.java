@@ -6,7 +6,7 @@ import example.singleton.instances.Simplest;
 import example.singleton.instances.StaticInnerClass;
 
 /**
- * @author liuhaibo on 2017/12/26
+ * @author puppylpg on 2017/12/26
  */
 public class SingletonDemo {
 

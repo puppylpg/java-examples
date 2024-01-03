@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.WeakHashMap;
 
 /**
- * @author liuhaibo on 2018/03/07
+ * @author puppylpg on 2018/03/07
  */
 public class WeakHashMapDemo {
 

@@ -1,7 +1,7 @@
 package example.callback;
 
 /**
- * @author liuhaibo on 2018/04/11
+ * @author puppylpg on 2018/04/11
  */
 public interface IListener {
 

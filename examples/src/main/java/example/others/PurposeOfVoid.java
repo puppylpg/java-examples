@@ -1,12 +1,12 @@
 package example.others;
 
 /**
- * 1. in reflection: get the return type of a method as void;
+ * 1. in reflection: get the return type of method as void;
  * 2. use Void class in Generics to specify that
  *      you don't care about the specific type of object being used.
  *      For example: List<void> list1;
  *
- * @author liuhaibo on 2017/11/19
+ * @author puppylpg on 2017/11/19
  */
 public class PurposeOfVoid {
 

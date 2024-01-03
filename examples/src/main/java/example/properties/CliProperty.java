@@ -5,13 +5,13 @@ import java.util.Properties;
 import java.util.Set;
 
 /**
- * @author liuhaibo on 2018/07/09
+ * @author puppylpg on 2018/07/09
  */
 public class CliProperty {
 
     /**
-     * 1. vm options:    -Dliuhaibo.love=liuguilin-FOREVER
-     * 2. java -Dliuhaibo.love=liuguilin-forever -cp target/examples-1.0-SNAPSHOT.jar example.properties.CliProperty
+     * 1. vm options:    -Dpuppylpg.love=liubobo-FOREVER
+     * 2. java -Dpuppylpg.love=liubobo-forever -cp target/examples-1.0-SNAPSHOT.jar example.properties.CliProperty
      *
      * -Dproperty=value
      *      Sets a system property value.
@@ -22,7 +22,7 @@ public class CliProperty {
      * @param args args
      */
     public static void main(String ... args) {
-        System.out.println(System.getProperty("liuhaibo.love"));
+        System.out.println(System.getProperty("puppylpg.love"));
         printSystemProperties();
         printSystemEnvironments();
     }

@@ -3,7 +3,7 @@ package example.java8.flat;
 import java.util.Optional;
 
 /**
- * @author liuhaibo on 2018/03/11
+ * @author puppylpg on 2018/03/11
  */
 public class FlatMapOrNot {
 

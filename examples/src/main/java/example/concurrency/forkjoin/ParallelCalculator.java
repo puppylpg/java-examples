@@ -6,7 +6,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.RecursiveTask;
 
 /**
- * @author liuhaibo on 2019/11/25
+ * @author puppylpg on 2019/11/25
  */
 public class ParallelCalculator {
 

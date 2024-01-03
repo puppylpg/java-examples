@@ -3,7 +3,7 @@ package example.proxy.jdk;
 /**
  * 其实，结合RPC想想，这个类就是protocol，是server给client提供的接口！
  *
- * @author liuhaibo on 2018/04/18
+ * @author puppylpg on 2018/04/18
  */
 public interface Coder {
 

@@ -2,9 +2,9 @@
 spring:
   datasource:
     url: jdbc:h2:mem:pokemon;DB_CLOSE_DELAY=-1;MODE=MySQL
-#    url: jdbc:mysql://localhost:3306/liuhaibo?useUnicode=true&characterEncoding=utf8&serverTimezone=Hongkong&verifyServerCertificate=false&useSSL=false
+#    url: jdbc:mysql://localhost:3306/puppylpg?useUnicode=true&characterEncoding=utf8&serverTimezone=Hongkong&verifyServerCertificate=false&useSSL=false
     # 批量写！！！
-#    url: jdbc:mysql://localhost:3306/liuhaibo?useUnicode=true&characterEncoding=utf8&serverTimezone=Hongkong&verifyServerCertificate=false&useSSL=false&rewriteBatchedStatements=true
+#    url: jdbc:mysql://localhost:3306/puppylpg?useUnicode=true&characterEncoding=utf8&serverTimezone=Hongkong&verifyServerCertificate=false&useSSL=false&rewriteBatchedStatements=true
     # embedded local file
     driverClassName: org.h2.Driver
     #spring.datasource.url=jdbc:h2:./pokemon

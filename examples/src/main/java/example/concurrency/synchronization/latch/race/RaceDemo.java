@@ -11,7 +11,7 @@ import java.util.concurrent.CountDownLatch;
  *
  * 所以准备了三个CountDownLatch。
  *
- * @author liuhaibo on 2018/06/08
+ * @author puppylpg on 2018/06/08
  */
 public class RaceDemo {
 

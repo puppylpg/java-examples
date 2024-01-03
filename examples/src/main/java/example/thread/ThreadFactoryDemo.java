@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadFactory;
  *
  * 线程的创建，尽量使用{@link ThreadFactory}
  *
- * @author liuhaibo on 2019/07/31
+ * @author puppylpg on 2019/07/31
  */
 public class ThreadFactoryDemo {
 

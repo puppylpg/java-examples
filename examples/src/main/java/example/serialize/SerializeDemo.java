@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author liuhaibo on 2017/11/30
+ * @author puppylpg on 2017/11/30
  */
 public class SerializeDemo {
 
@@ -49,7 +49,7 @@ public class SerializeDemo {
             ObjectOutputStream oos = new ObjectOutputStream(fos);
 
             oos.writeObject(inputStudent);
-            oos.writeObject("liuhaibo");
+            oos.writeObject("puppylpg");
             oos.writeObject(inputTeacher);
 
             oos.close();

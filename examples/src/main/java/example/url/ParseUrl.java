@@ -3,7 +3,7 @@ package example.url;
 import java.net.URL;
 
 /**
- * @author liuhaibo on 2020/01/22
+ * @author puppylpg on 2020/01/22
  */
 public class ParseUrl {
     public static void main(String[] args) throws Exception {

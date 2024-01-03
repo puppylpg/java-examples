@@ -7,7 +7,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * 事实证明，无论是把this对象作为锁，把非static方法作为锁，还是把static method作为锁，都是把class对象作为锁。
  *
- * @author liuhaibo on 2022/05/18
+ * @author puppylpg on 2022/05/18
  */
 public class OrdinaryObjectBlended extends LockBase {
 

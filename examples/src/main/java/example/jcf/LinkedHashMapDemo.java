@@ -3,7 +3,7 @@ package example.jcf;
 import java.util.*;
 
 /**
- * @author liuhaibo on 2020/04/17
+ * @author puppylpg on 2020/04/17
  */
 public class LinkedHashMapDemo {
 

@@ -8,7 +8,7 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
 /**
- * @author liuhaibo on 2018/08/13
+ * @author puppylpg on 2018/08/13
  */
 public class GzipIODemo {
 

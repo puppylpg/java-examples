@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * @author liuhaibo on 2018/12/23
+ * @author puppylpg on 2018/12/23
  */
 public class ThreadWait {
     /**
