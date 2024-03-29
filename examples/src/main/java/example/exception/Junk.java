@@ -28,6 +28,7 @@ package example.exception;
 public class Junk {
 
     /**
+     * ======= e.printStackTrace() =======
      * example.exception.HighLevelException: Why me...
      * 	at example.exception.Junk.a(Junk.java:36)
      * 	at example.exception.Junk.main(Junk.java:10)
@@ -69,6 +70,7 @@ public class Junk {
         try {
             a();
         } catch (HighLevelException e) {
+            System.err.println("======= e.printStackTrace() =======");
             e.printStackTrace();
 
             System.err.println("======= cause.toString =======");
