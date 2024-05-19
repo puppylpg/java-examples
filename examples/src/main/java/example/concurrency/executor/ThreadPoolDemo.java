@@ -30,6 +30,7 @@ public class ThreadPoolDemo {
     public static void main(String... args) throws InterruptedException {
         RejectedExecutionHandler callerBlocksPolicy = (r, executor) -> {
             try {
+                // 不建议直接操作这个内部queue：Access to the task queue is intended primarily for debugging and monitoring.
                 executor.getQueue().put(r);
             } catch (InterruptedException e) {
                 e.printStackTrace();
