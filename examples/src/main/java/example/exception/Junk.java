@@ -1,5 +1,7 @@
 package example.exception;
 
+import org.apache.commons.lang3.exception.ExceptionUtils;
+
 /**
  * 每一个e由三部分组成：
  * - message；
@@ -88,6 +90,10 @@ public class Junk {
 //            if (e.getCause() instanceof MidLevelException) {
 //                System.out.println("niubility");
 //            }
+
+            // 这个方法和printStackTrace一样，都是获取stack trace，前者打到string writer里，然后返回数组；后者打到stderr里
+            System.err.println("======= ExceptionUtils#getStackTrace(Throwable) =======");
+            System.err.println(ExceptionUtils.getStackTrace(e));
         }
     }
 

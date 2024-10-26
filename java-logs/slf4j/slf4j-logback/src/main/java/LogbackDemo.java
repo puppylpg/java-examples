@@ -12,5 +12,18 @@ public class LogbackDemo {
         log.debug("Debug log message");
         log.info("Info log message");
         log.error("Error log message");
+        try {
+            a();
+        } catch (Exception e) {
+            log.error("an error", e);
+        }
+    }
+
+    public static void a() throws Exception {
+        b();
+    }
+
+    public static void b() throws Exception {
+        throw new Exception("an error");
     }
 }
